@@ -14,8 +14,5 @@ class Controller extends BaseController
     /**
      * The Homepage of the project
      */
-    public function index()
-    {
-        return view('index');
-    }
+    
 }
