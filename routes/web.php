@@ -17,6 +17,9 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('auth.login');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('comics.home');
+Route::get('/home', [App\Http\Controllers\ComicController::class, 'index'])->name('comics.home');
+Route::get('/comics/{id}', [App\Http\Controllers\ComicController::class, 'show'])->name('comics.show');
 
-Route::get('/messages/create', [App\Http\Controllers\MessageController::class, 'create'])->name('messages.create');
+
+Route::post('/Contacts/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contacts.store');
+

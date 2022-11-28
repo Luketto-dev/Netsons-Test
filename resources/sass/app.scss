@@ -6,4 +6,10 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+//my scss style
 @import "./partials/_header.scss";
+@import "./partials/_jumbotron.scss";
+@import "./partials/_comics-card.scss";
+@import "./partials/_general";
+@import "./partials/_footer";
+@import "./partials/_banner-home";

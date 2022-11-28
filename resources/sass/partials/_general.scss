@@ -1,0 +1,39 @@
+body{
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+.small-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bg-light-green{
+    background-color: #55BA59;
+}
+
+.bg-light-grey{
+    background-color: #F6F6F6;
+}
+
+.blue-bar{
+    height: 100px;
+    width: 100%;
+    background-color: #0282F9;
+    padding-bottom: 2rem ;
+
+    & img{
+        transform: translateY(-70%);
+    }
+}
+
+.btn-primary{
+    border-radius: 0;
+    padding: .3rem 2.5rem;
+    background-color: #0282F9;
+    font-size: .8rem;
+}
+
+.talent,
+.specs{
+    font-size: .7rem;
+}

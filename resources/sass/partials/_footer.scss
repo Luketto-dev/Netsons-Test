@@ -1,0 +1,48 @@
+footer{
+    background-image: url('/resources/images/footer-bg.jpg');
+    background-size: cover ;
+    background-position: center;
+    
+
+
+    & .links-title h5{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    & .footer-list{
+        
+        & a{
+            color: #878878;
+            font-size: .9rem;
+        }
+    }
+
+    & .dc-logo img{
+        width: 100%;
+        position: absolute;
+        top: -100px;
+        
+    }
+    
+    & .banner-social{
+        background-color: #303030;
+    
+        & .btn-secondary{
+            border-radius: 0;
+            border: 2px solid #0282F9;
+            background-color: inherit;
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+        }
+    
+        & h6{
+            color: #0282F9;
+            font-weight: bold;
+            padding-right: 1rem;
+            margin: 0;
+        }
+    }
+
+
+}

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class MessageController extends Controller
+class ContactController extends Controller
 {
 
     public function __construct()
@@ -28,7 +30,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        return view('messages.create');
+        
     }
 
     /**
@@ -39,8 +41,27 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $data = $request->validate([
+            "title" => "required|string",
+            "content" => "required|string",
+            
+        ]);
+
+
+        $contact = new Contact();
+        $user = Auth::user();
+        $contact->fill($data);
+        $contact->user_id = $user->id;
+        
+        $contact->save();
+
+        return view('messages.sendMessage');
     }
+
+
+    
 
     /**
      * Display the specified resource.
@@ -50,7 +71,7 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

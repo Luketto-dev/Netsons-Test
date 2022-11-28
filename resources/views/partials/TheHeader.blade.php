@@ -27,7 +27,7 @@
     <div class="container">
         <nav class="d-flex py-3">
             <div class="logo">
-                <img src="{{url('/public/images/dc-logo.png')}}" alt="">
+                <img class="w-100" src="{{  Vite::asset('resources/images/dc-logo.png') }}" alt="">
             </div>
             <ul class="w-100 justify-content-between my-navbar d-flex align-items-center list-unstyled">
                     <div>
@@ -39,15 +39,18 @@
                         </a>
                     </li>
                     </div>
-                    
                     <div class="d-flex">
-                    <li class="my-navbar-item">
-                        {{-- A seconda del caso, aggiungo la classe "active" al tag a --}}
-                        <a class="p-3 text-uppercase {{ Request::route()->getName() === 'messages.create' ? 'active' : '' }}"
-                            href="{{ route('messages.create') }}">
-                            Contattaci
-                        </a>
-                    </li>
+                    @auth
+                    
+                        <li class="my-navbar-item">
+                            {{-- A seconda del caso, aggiungo la classe "active" al tag a --}}
+                            <a class="p-3 text-uppercase"
+                            href="#contact-us">
+                                Contact Us
+                            </a>
+                        </li>
+                    @endauth
+                    
                     @guest
                     <li class="my-navbar-item">
                         {{-- A seconda del caso, aggiungo la classe "active" al tag a --}}
