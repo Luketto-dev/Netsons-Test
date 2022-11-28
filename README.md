@@ -4,30 +4,9 @@ Questo è un progetto di test per la valutazioni delle capacità del candidato
 
 # Come installare il progetto
 
-Per avviare il proggetto ho utilizzato php artisan serve
+Per avviare il proggetto ho utilizzato artisan 
 ```shell
 php artisan serve
-```
-
-## Clona il repository
-
-Se non l'hai già fatto clona il repository da github. Puoi clonare direttamente il nostro repository o, per semplicità, esegui un fork.
-(p.s. se hai eseguito un fork modifica il path nel comando successivo con il path al tuo repository)
-
-```shell
-git clone git@github.com:Athomos-Github/Netsons-Test.git
-```
-
-oppure 
-
-```
-git clone https://github.com/Athomos-Github/Netsons-Test.git
-```
-
-## Spostati nella cartella del progetto
-
-```shell
-cd Netsons-Test
 ```
 
 ## Installa le dipendenze di composer
@@ -66,7 +45,8 @@ npm run dev
 php artisan migrate
 ```
 
-#Eseguire seeders
+# Eseguire seeders
+
 ``` shell
 php artisan db:seed --class ComicsTableSeeder
 ```
