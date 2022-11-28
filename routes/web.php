@@ -21,5 +21,6 @@ Route::get('/home', [App\Http\Controllers\ComicController::class, 'index'])->nam
 Route::get('/comics/{id}', [App\Http\Controllers\ComicController::class, 'show'])->name('comics.show');
 
 
-Route::post('/Contacts/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contacts.store');
+
+Route::post('/Contacts', [App\Http\Controllers\ContactController::class, 'store'])->name('contacts.store');
 

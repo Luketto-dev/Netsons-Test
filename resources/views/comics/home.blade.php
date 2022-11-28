@@ -7,7 +7,9 @@
 </div>
 
 <div class="bg-dark">
+    
     <div class="container">
+        
         @include('partials.ComicsList')
     </div>
 </div>
@@ -15,3 +17,8 @@
 @include('partials.ContactUsSection')
 
 @endsection
+
+
+<script>
+
+</script>

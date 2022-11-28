@@ -14,7 +14,7 @@
 
 
 <script>
-    window.onload(redirectToHome())
+    document.addEventListener('load',redirectToHome())
 
 
     function redirectToHome() {

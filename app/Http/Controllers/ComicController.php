@@ -26,9 +26,15 @@ class ComicController extends Controller
     public function index(Request $request)
     {
 
-        
+        $name = $request->input('name');
 
-        $comics = DB::table('comics')->get();
+        if ($name) {
+            $comics = DB::table('comics')->where('name', 'like', '%' .$name. '%')->get();
+        }else{
+            $comics = DB::table('comics')->get();
+        }
+
+        
 
         $comics = json_decode($comics, true);
 
