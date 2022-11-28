@@ -15,6 +15,7 @@ class Contact extends Model
     ];
 
 
+    //relazione molti a uno tra contatti e utenti
     public function user()
     {
         return $this->belongsTo('App\User');

@@ -43,6 +43,7 @@ class ContactController extends Controller
     {
 
 
+        // valido i dati inviati tramite form di contatti
         $data = $request->validate([
             "title" => "required|string",
             "content" => "required|string",
@@ -50,13 +51,16 @@ class ContactController extends Controller
         ]);
 
 
+        // creo nuova riga a db
         $contact = new Contact();
         $user = Auth::user();
         $contact->fill($data);
         $contact->user_id = $user->id;
         
+        //salvo la nuova riga
         $contact->save();
 
+        // ritorno la pagina di feedback
         return view('messages.sendMessage');
     }
 

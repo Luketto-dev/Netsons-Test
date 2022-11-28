@@ -28,9 +28,11 @@ class ComicController extends Controller
 
         $name = $request->input('name');
 
+        // se $name esiste allora mi vado a prendere dal db i fumetti che includono nel nome le lettere inserite tramite l input dall utente
         if ($name) {
             $comics = DB::table('comics')->where('name', 'like', '%' .$name. '%')->get();
         }else{
+            //altrimenti prendo tutti i fumetti
             $comics = DB::table('comics')->get();
         }
 

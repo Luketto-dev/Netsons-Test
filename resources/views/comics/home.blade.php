@@ -6,7 +6,7 @@
     <img src="{{Vite::asset('resources/images/jumbotron.jpg')}}" alt="">
 </div>
 
-<div class="bg-dark">
+<div class="bg-dark pb-5">
     
     <div class="container">
         

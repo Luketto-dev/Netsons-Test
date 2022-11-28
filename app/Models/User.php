@@ -42,7 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
+    // relazione di uno a molti tra utenti e contatti
     public function contacts()
     {
         return $this->hasMany('App\Contact');
